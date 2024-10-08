@@ -1,0 +1,33 @@
+<div class="card" style="min-width: 13rem; min-height: 280px">
+  @if(cardInfo.img){
+  <div class="d-flex mt-1">
+    <img
+      [src]="cardInfo.img"
+      class="card-img-top mx-auto"
+      [ngClass]="cardInfo.card ? 'w-25' : 'w-100'"
+      alt="img"
+    />
+  </div>
+  }
+  <div class="card-body">
+    <h6 class="card-title">{{ cardInfo.title }}</h6>
+    <p class="card-text">
+      @if(cardInfo.card){
+      {{ cardInfo.smallDescription }}
+      }@else {
+      {{ cardInfo.largeDescription }}
+      }
+    </p>
+  </div>
+  @if(cardInfo.card){
+  <div class="pb-2 d-flex">
+    <button
+      class="btn btn-dark mx-auto"
+      type="button"
+      (click)="emitSelectedCardDetails()"
+    >
+      Play Now
+    </button>
+  </div>
+  }
+</div>

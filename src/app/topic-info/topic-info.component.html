@@ -1,0 +1,22 @@
+<div
+  class="container border p-2 rounded d-flex align-items-center justify-content-center"
+  style="min-height: 50%"
+>
+  @if (cardDetails) {
+  <div>
+    <app-card [cardInfo]="cardDetails"></app-card>
+    <div class="mt-2 d-flex mx-2">
+      <h6 class="my-auto">For full course please subscribe</h6>
+      <div class="ms-auto">
+        <!-- <app-subscribe-button ></app-subscribe-button> -->
+        <button class="btn btn-outline-success" type="button" (click)="subscribeNow()">Subscribe Now</button> 
+
+      </div>
+    </div>
+  </div>
+  }@else {
+  <div class="text-danger mx-auto justify-content-center">
+    <h4>No course Selected</h4>
+  </div>
+  }
+</div>
