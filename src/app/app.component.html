@@ -1,0 +1,12 @@
+<div class="container  rounded">
+  <div class="col-12"><app-header> </app-header></div>
+
+  <div class="row mt-3">
+    <div class="col-lg-8 col-md-8 col-sm-12">
+      <app-topic-list (selectedCard)="selectedCard($event)"></app-topic-list>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <app-topic-info [cardDetails]="cardInfo"></app-topic-info>
+    </div>
+  </div>
+</div>

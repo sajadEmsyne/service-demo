@@ -1,0 +1,16 @@
+<div class="container row border p-2 rounded">
+  @for (cardInfo of topicList;track $index){
+  <div class="col mt-1">
+    <app-card  [cardInfo]="cardInfo" [mappingId]="$index" (selectedId)="selectedCardDetails($event)"></app-card>
+  </div>
+  }
+
+  <div class="rounded bg-warning d-flex p-2 mt-2 mx-3" style="width: 96% !important;">
+    <h4 class="my-auto ">Subsribe for Angular Courses</h4>
+    <div class="ms-auto">
+        <!-- <app-subscribe-button></app-subscribe-button> -->
+        <button class="btn btn-outline-success" type="button" (click)="subscribeNow()">Subscribe Now</button> 
+
+    </div>
+  </div>
+</div>
