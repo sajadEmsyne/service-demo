@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { cardInfo } from '../shared/interfaces/cardInfo';
-import { CardComponent } from '../shared/components/card/card.component';
 import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { AppService } from '../app.service';
+import { CardComponent } from '../shared/components/card/card.component';
 import { SubscribeButtonComponent } from '../shared/components/subscribe-button/subscribe-button.component';
+import { cardInfo } from '../shared/interfaces/cardInfo';
 
 @Component({
   selector: 'app-topic-list',
@@ -66,6 +67,15 @@ export class TopicListComponent {
     },
   ];
 
+  constructor(private appService: AppService) {
+    this.loadTopicList();
+  }
+
+  loadTopicList() {
+    this.appService.fetchTopicList().subscribe((data) => {
+      console.log(data, 'Data');
+    });
+  }
   selectedCardDetails(id: number) {
     this.selectedCard.emit(this.topicList[id]);
   }
