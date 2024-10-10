@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubscribeButtonComponent } from './subscribe-button.component';
+import { PurchaseButtonComponent } from './purchase-button.component';
 
-describe('SubscribeButtonComponent', () => {
-  let component: SubscribeButtonComponent;
-  let fixture: ComponentFixture<SubscribeButtonComponent>;
+describe('PurchaseButtonComponent', () => {
+  let component: PurchaseButtonComponent;
+  let fixture: ComponentFixture<PurchaseButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SubscribeButtonComponent]
+      imports: [PurchaseButtonComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SubscribeButtonComponent);
+    fixture = TestBed.createComponent(PurchaseButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

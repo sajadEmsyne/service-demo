@@ -7,9 +7,9 @@ import { Injectable } from '@angular/core';
 export class AppService {
   constructor(private http: HttpClient) {}
 
-  subscribeNow() {
+  purchaseNow() {
     // ...Some logics
-    alert('Thank you for the subscription,Subscription from service');
+    alert('Thank you for the purchase,purchase from service');
   }
 
   fetchTopicList() {

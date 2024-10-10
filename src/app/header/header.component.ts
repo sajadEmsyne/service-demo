@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
-import { SubscribeButtonComponent } from '../shared/components/subscribe-button/subscribe-button.component';
+import { PurchaseButtonComponent } from '../shared/components/purchase-button/purchase-button.component';
 import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [SubscribeButtonComponent],
+  imports: [PurchaseButtonComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   constructor(
     // private appService: AppService
-    // this.appService.subscribeNow()
+    // this.appService.purchaseNow()
   ) {}
-  subscribeNow() {
+  purchaseNow() {
     // ...Some logics
-    alert('Thank you for the subscription');
+    alert('Thank you for the purchase');
   }
 }

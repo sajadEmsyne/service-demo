@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { AppService } from '../app.service';
 import { CardComponent } from '../shared/components/card/card.component';
-import { SubscribeButtonComponent } from '../shared/components/subscribe-button/subscribe-button.component';
+import { PurchaseButtonComponent } from '../shared/components/purchase-button/purchase-button.component';
 import { cardInfo } from '../shared/interfaces/cardInfo';
 
 @Component({
   selector: 'app-topic-list',
   standalone: true,
-  imports: [CardComponent, CommonModule, SubscribeButtonComponent],
+  imports: [CardComponent, CommonModule, PurchaseButtonComponent],
   templateUrl: './topic-list.component.html',
   styleUrl: './topic-list.component.css',
 })
@@ -81,8 +81,8 @@ export class TopicListComponent {
     this.selectedCard.emit(this.topicList[id]);
   }
 
-  subscribeNow() {
+  purchaseNow() {
     // ...Some logics
-    alert('Thank you for the subscription');
+    alert('Thank you for the purchase');
   }
 }
